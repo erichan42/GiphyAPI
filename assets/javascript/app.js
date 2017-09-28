@@ -1,4 +1,14 @@
-var animalArr = [];
+var animalArr = ["cat","dog","catdog"];
+
+$(document).ready(function() {
+for (var i = 0; i < animalArr.length; i++) {
+        var buttonAnimal = $("<button>");
+        buttonAnimal.attr("animal", animalArr[i]);
+        buttonAnimal.addClass("animal-button");
+        buttonAnimal.html(animalArr[i]);
+        $("#animalButtons").append(buttonAnimal);
+    }
+});
 
 $("#addAnimal").on("click",function() {
     event.preventDefault();
